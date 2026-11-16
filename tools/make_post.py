@@ -114,6 +114,48 @@ def make_photo(quote, out, handle, seed):
     bg.save(out, "JPEG", quality=94)
 
 
+def make_fact(fact, out, handle, seed, category="", source=""):
+    """'Did you know?' fact card, 1080x1350."""
+    rng = random.Random(seed)
+    pal = rng.choice(PALETTES)
+    W, H = 1080, 1350
+    bg = background(W, H, pal, rng)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    accent = pal[2]
+    margin = int(W * 0.10)
+    y = int(H * 0.10)
+    # category pill
+    if category:
+        pf = font(SMALL_FONT, 30)
+        label = category.upper()
+        tw = d.textlength(label, font=pf)
+        d.rounded_rectangle([margin, y, margin + tw + 48, y + 56], radius=28, outline=accent + (255,), width=3)
+        d.text((margin + 24, y + 9), label, font=pf, fill=accent + (255,))
+        y += 100
+    # headline
+    hf = font(f"{FONT_DIR}/Poppins-Bold.ttf", 96)
+    d.text((margin, y), "Did you know?", font=hf, fill=accent + (255,))
+    y += 150
+    d.rectangle([margin, y, margin + 120, y + 8], fill=accent + (255,))
+    y += 60
+    # fact body
+    bottom_reserved = int(H * 0.17)
+    f, lines, lh = fit_text(d, fact, f"{FONT_DIR}/Poppins-SemiBold.ttf",
+                            W - 2 * margin, H - y - bottom_reserved, start=64, minimum=36)
+    for i, line in enumerate(lines):
+        d.text((margin, y + i * lh), line, font=f, fill=(255, 255, 255, 255))
+    # footer
+    sf = font(SMALL_FONT, 28)
+    if source:
+        d.text((margin, H - int(H * 0.115)), "Source: " + source, font=sf, fill=(255, 255, 255, 170))
+    if handle:
+        hf2 = font(SMALL_FONT, int(W * 0.034))
+        d.text((margin, H - int(H * 0.075)), handle, font=hf2, fill=(255, 255, 255, 200))
+    bg.paste(layer, (0, 0), layer)
+    bg.save(out, "JPEG", quality=94)
+
+
 PROGRESSIONS = [  # semitone offsets from root for 4 chords (calm, uplifting)
     [[0, 4, 7, 11], [9, 12, 16, 19], [5, 9, 12, 16], [7, 11, 14, 17]],   # Imaj7 vi IV V
     [[0, 3, 7, 10], [8, 12, 15, 19], [3, 7, 10, 14], [10, 14, 17, 21]],  # i VI III VII
@@ -216,12 +258,18 @@ def make_reel(quote, out, handle, seed):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("kind", choices=["photo", "reel"])
+    ap.add_argument("kind", choices=["photo", "reel", "fact"])
     ap.add_argument("quote")
     ap.add_argument("out")
     ap.add_argument("--handle", default="")
     ap.add_argument("--seed", type=int, default=None)
+    ap.add_argument("--category", default="")
+    ap.add_argument("--source", default="")
     a = ap.parse_args()
     seed = a.seed if a.seed is not None else random.randrange(1 << 30)
-    (make_photo if a.kind == "photo" else make_reel)(a.quote, a.out, a.handle, seed)
+    os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
+    if a.kind == "fact":
+        make_fact(a.quote, a.out, a.handle, seed, a.category, a.source)
+    else:
+        (make_photo if a.kind == "photo" else make_reel)(a.quote, a.out, a.handle, seed)
     print(a.out)
