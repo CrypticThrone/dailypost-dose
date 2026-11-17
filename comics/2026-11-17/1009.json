@@ -1,0 +1,14 @@
+{
+  "title": "Snooze Strategy",
+  "panels": [
+    {"bg": "night", "caption": "Mimi's bedtime routine",
+     "chars": [{"name": "Mimi", "x": 0.5, "pose": "point", "face": "smug"}],
+     "lines": [{"who": "Mimi", "text": "Alarms: 7:00, 7:05, 7:10... all the way to 7:40."}]},
+    {"bg": "night",
+     "chars": [{"name": "Tito", "x": 0.33, "pose": "wave", "face": "happy"}, {"name": "Mimi", "x": 0.67, "pose": "stand", "face": "neutral", "flip": true}],
+     "lines": [{"who": "Tito", "text": "Why not just one alarm at 7:40?"}]},
+    {"bg": "night",
+     "chars": [{"name": "Tito", "x": 0.33, "pose": "facepalm", "face": "shock"}, {"name": "Mimi", "x": 0.67, "pose": "hips", "face": "smug", "flip": true}],
+     "lines": [{"who": "Mimi", "text": "And miss out on eight bonus naps?"}]}
+  ]
+}
