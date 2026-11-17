@@ -1,0 +1,14 @@
+{
+  "title": "The Period",
+  "panels": [
+    {"bg": "room", "caption": "Benny gets a text",
+     "chars": [{"name": "Benny", "x": 0.5, "pose": "stand", "face": "shock"}],
+     "lines": [{"who": "Benny", "text": "Lula replied \"ok.\" WITH a period."}]},
+    {"bg": "room",
+     "chars": [{"name": "Benny", "x": 0.5, "pose": "shrug", "face": "angry"}],
+     "lines": [{"who": "Benny", "text": "Is she mad? Should I apologize? Move cities?"}]},
+    {"bg": "park",
+     "chars": [{"name": "Lula", "x": 0.33, "pose": "hips", "face": "neutral"}, {"name": "Benny", "x": 0.67, "pose": "facepalm", "face": "sleepy", "flip": true}],
+     "lines": [{"who": "Lula", "text": "I was just typing fast."}, {"who": "Benny", "text": "I already sold my couch."}]}
+  ]
+}
