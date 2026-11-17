@@ -1,0 +1,102 @@
+{
+ "title": "Quick Call",
+ "panels": [
+  {
+   "bg": "office",
+   "chars": [
+    {
+     "name": "Lula",
+     "x": 0.33,
+     "pose": "point",
+     "face": "happy"
+    },
+    {
+     "name": "Benny",
+     "x": 0.67,
+     "pose": "stand",
+     "face": "neutral",
+     "flip": true
+    }
+   ],
+   "lines": [
+    {
+     "who": "Lula",
+     "text": "Can we hop on a quick call?"
+    }
+   ]
+  },
+  {
+   "bg": "office",
+   "chars": [
+    {
+     "name": "Lula",
+     "x": 0.33,
+     "pose": "stand",
+     "face": "smug"
+    },
+    {
+     "name": "Benny",
+     "x": 0.67,
+     "pose": "shrug",
+     "face": "neutral",
+     "flip": true
+    }
+   ],
+   "lines": [
+    {
+     "who": "Benny",
+     "text": "How quick is quick?"
+    }
+   ]
+  },
+  {
+   "bg": "office",
+   "chars": [
+    {
+     "name": "Lula",
+     "x": 0.33,
+     "pose": "wave",
+     "face": "happy"
+    },
+    {
+     "name": "Benny",
+     "x": 0.67,
+     "pose": "stand",
+     "face": "happy",
+     "flip": true
+    }
+   ],
+   "lines": [
+    {
+     "who": "Lula",
+     "text": "Five minutes, tops. Promise!"
+    }
+   ]
+  },
+  {
+   "bg": "night",
+   "caption": "Two hours later...",
+   "chars": [
+    {
+     "name": "Lula",
+     "x": 0.33,
+     "pose": "point",
+     "face": "happy"
+    },
+    {
+     "name": "Benny",
+     "x": 0.67,
+     "pose": "facepalm",
+     "face": "sleepy",
+     "flip": true
+    }
+   ],
+   "lines": [
+    {
+     "who": "Lula",
+     "text": "Great! Let's circle back tomorrow."
+    }
+   ]
+  }
+ ]
+}
