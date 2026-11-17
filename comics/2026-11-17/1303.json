@@ -1,0 +1,23 @@
+{
+ "title": "Thermostat Guard",
+ "panels": [
+  {"bg": "room",
+   "chars": [{"name": "Mimi", "x": 0.33, "pose": "shrug", "face": "sleepy"},
+             {"name": "Uncle Gjon", "x": 0.67, "pose": "hips", "face": "neutral", "flip": true}],
+   "lines": [{"who": "Mimi", "text": "Brr! Can we turn the heating on?"},
+             {"who": "Uncle Gjon", "text": "It's only November!"}]},
+  {"bg": "room",
+   "chars": [{"name": "Mimi", "x": 0.33, "pose": "point", "face": "angry"},
+             {"name": "Uncle Gjon", "x": 0.67, "pose": "stand", "face": "smug", "flip": true}],
+   "lines": [{"who": "Mimi", "text": "I can see my breath indoors!"},
+             {"who": "Uncle Gjon", "text": "Free fog machine!"}]},
+  {"bg": "night",
+   "caption": "Later that night...",
+   "chars": [{"name": "Mimi", "x": 0.5, "pose": "stand", "face": "smug"}],
+   "lines": [{"who": "Mimi", "text": "Just one tiny click. Nobody will know."}]},
+  {"bg": "night",
+   "chars": [{"name": "Mimi", "x": 0.33, "pose": "jump", "face": "shock"},
+             {"name": "Uncle Gjon", "x": 0.67, "pose": "point", "face": "smug", "flip": true}],
+   "lines": [{"who": "Uncle Gjon", "text": "The thermostat has an alarm. It's me."}]}
+ ]
+}
