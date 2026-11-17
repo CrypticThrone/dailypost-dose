@@ -1,0 +1,20 @@
+{
+ "title": "Free Shipping",
+ "panels": [
+  {"bg": "room",
+   "chars": [{"name": "Benny", "x": 0.33, "pose": "point", "face": "angry"},
+             {"name": "Tito", "x": 0.67, "pose": "stand", "face": "happy", "flip": true}],
+   "lines": [{"who": "Benny", "text": "Five dollars shipping? Absolutely not."},
+             {"who": "Tito", "text": "Smart saving, Benny!"}]},
+  {"bg": "room",
+   "chars": [{"name": "Benny", "x": 0.33, "pose": "shrug", "face": "neutral"},
+             {"name": "Tito", "x": 0.67, "pose": "wave", "face": "happy", "flip": true}],
+   "lines": [{"who": "Benny", "text": "Free shipping over $50. I'm at $22."},
+             {"who": "Tito", "text": "So close! Add stuff!"}]},
+  {"bg": "room",
+   "chars": [{"name": "Benny", "x": 0.33, "pose": "hips", "face": "smug"},
+             {"name": "Tito", "x": 0.67, "pose": "jump", "face": "happy", "flip": true}],
+   "lines": [{"who": "Benny", "text": "Done! Spent $36 more to save $5."},
+             {"who": "Tito", "text": "Financial genius!"}]}
+ ]
+}
