@@ -1,0 +1,17 @@
+{
+  "title": "Leg Day? Bag Day.",
+  "panels": [
+    {"bg": "park",
+     "chars": [{"name": "Tito", "x": 0.33, "pose": "wave", "face": "happy"}, {"name": "Uncle Gjon", "x": 0.67, "pose": "stand", "face": "neutral", "flip": true}],
+     "lines": [{"who": "Tito", "text": "Join my gym! First month free!"}]},
+    {"bg": "park",
+     "chars": [{"name": "Tito", "x": 0.33, "pose": "stand", "face": "neutral"}, {"name": "Uncle Gjon", "x": 0.67, "pose": "shrug", "face": "smug", "flip": true}],
+     "lines": [{"who": "Uncle Gjon", "text": "No need. I lift every week."}]},
+    {"bg": "park",
+     "chars": [{"name": "Tito", "x": 0.33, "pose": "jump", "face": "happy"}, {"name": "Uncle Gjon", "x": 0.67, "pose": "stand", "face": "smug", "flip": true}],
+     "lines": [{"who": "Tito", "text": "Wow! Dumbbells? Kettlebells?"}]},
+    {"bg": "park",
+     "chars": [{"name": "Tito", "x": 0.33, "pose": "facepalm", "face": "shock"}, {"name": "Uncle Gjon", "x": 0.67, "pose": "hips", "face": "smug", "flip": true}],
+     "lines": [{"who": "Uncle Gjon", "text": "All the grocery bags. ONE trip."}, {"who": "Tito", "text": "...Okay, that's elite."}]}
+  ]
+}
